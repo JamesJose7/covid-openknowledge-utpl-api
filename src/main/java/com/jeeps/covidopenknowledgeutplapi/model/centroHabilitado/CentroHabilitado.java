@@ -7,6 +7,7 @@ import javax.persistence.Entity;
 @Entity
 public class CentroHabilitado extends BaseEntity {
     private String provincia;
+    private String ciudad;
     private String hospital;
     private String ubicacion;
     private String geoLink;
@@ -19,6 +20,14 @@ public class CentroHabilitado extends BaseEntity {
 
     public void setProvincia(String provincia) {
         this.provincia = provincia;
+    }
+
+    public String getCiudad() {
+        return ciudad;
+    }
+
+    public void setCiudad(String ciudad) {
+        this.ciudad = ciudad;
     }
 
     public String getHospital() {
