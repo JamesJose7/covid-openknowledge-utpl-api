@@ -23,6 +23,10 @@ public class Caso extends BaseEntity {
     @JsonManagedReference
     private List<PosibleContagio> posiblesContagios;
     private Date fecha;
+    private String longitud;
+    private String latitud;
+    private int edad;
+    private String nacionalidad;
 
     public String getLugarDiagnostico() {
         return lugarDiagnostico;
@@ -68,5 +72,37 @@ public class Caso extends BaseEntity {
 
     public void setFecha(Date fecha) {
         this.fecha = fecha;
+    }
+
+    public String getLongitud() {
+        return longitud;
+    }
+
+    public void setLongitud(String longitud) {
+        this.longitud = longitud;
+    }
+
+    public String getLatitud() {
+        return latitud;
+    }
+
+    public void setLatitud(String latitud) {
+        this.latitud = latitud;
+    }
+
+    public int getEdad() {
+        return edad;
+    }
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
+    public String getNacionalidad() {
+        return nacionalidad;
+    }
+
+    public void setNacionalidad(String nacionalidad) {
+        this.nacionalidad = nacionalidad;
     }
 }
