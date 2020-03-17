@@ -1,7 +1,11 @@
 package com.jeeps.covidopenknowledgeutplapi.core;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+
 import javax.persistence.*;
 
+@ApiModel
 @MappedSuperclass
 public abstract class BaseEntity {
     @Id
@@ -12,6 +16,7 @@ public abstract class BaseEntity {
         id = null;
     }
 
+    @ApiModelProperty(hidden = true)
     public Long getId() {
         return id;
     }

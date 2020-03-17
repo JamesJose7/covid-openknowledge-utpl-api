@@ -2,13 +2,18 @@ package com.jeeps.covidopenknowledgeutplapi.model.noticia;
 
 import com.jeeps.covidopenknowledgeutplapi.core.BaseEntity;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import java.util.Date;
 
 @Entity
 public class Noticia extends BaseEntity {
     private String titulo;
     private String resumen;
-    private String link;
+    private String fuente;
+    private Date fecha;
+    @Column(columnDefinition = "boolean default false")
+    private boolean estadoCuarentena;
 
     public String getTitulo() {
         return titulo;
@@ -26,11 +31,27 @@ public class Noticia extends BaseEntity {
         this.resumen = resumen;
     }
 
-    public String getLink() {
-        return link;
+    public String getFuente() {
+        return fuente;
     }
 
-    public void setLink(String link) {
-        this.link = link;
+    public void setFuente(String link) {
+        this.fuente = link;
+    }
+
+    public Date getFecha() {
+        return fecha;
+    }
+
+    public void setFecha(Date fecha) {
+        this.fecha = fecha;
+    }
+
+    public boolean isEstadoCuarentena() {
+        return estadoCuarentena;
+    }
+
+    public void setEstadoCuarentena(boolean estadoCuarentena) {
+        this.estadoCuarentena = estadoCuarentena;
     }
 }

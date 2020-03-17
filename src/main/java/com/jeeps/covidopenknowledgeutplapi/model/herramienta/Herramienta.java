@@ -7,8 +7,9 @@ import javax.persistence.Entity;
 @Entity
 public class Herramienta extends BaseEntity {
     private String nombre;
-    private String link;
+    private String fuente;
     private String finalidad;
+    private String categoria;
 
     public String getNombre() {
         return nombre;
@@ -18,12 +19,12 @@ public class Herramienta extends BaseEntity {
         this.nombre = nombre;
     }
 
-    public String getLink() {
-        return link;
+    public String getFuente() {
+        return fuente;
     }
 
-    public void setLink(String link) {
-        this.link = link;
+    public void setFuente(String link) {
+        this.fuente = link;
     }
 
     public String getFinalidad() {
@@ -32,5 +33,13 @@ public class Herramienta extends BaseEntity {
 
     public void setFinalidad(String finalidad) {
         this.finalidad = finalidad;
+    }
+
+    public String getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(String categoria) {
+        this.categoria = categoria;
     }
 }

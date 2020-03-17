@@ -11,6 +11,7 @@ public class MedioComunicacion extends BaseEntity {
     private String Nombre;
     @ElementCollection
     private List<String> redes;
+    private String fuente;
 
     public String getNombre() {
         return Nombre;
@@ -26,5 +27,13 @@ public class MedioComunicacion extends BaseEntity {
 
     public void setRedes(List<String> redes) {
         this.redes = redes;
+    }
+
+    public String getFuente() {
+        return fuente;
+    }
+
+    public void setFuente(String fuente) {
+        this.fuente = fuente;
     }
 }
