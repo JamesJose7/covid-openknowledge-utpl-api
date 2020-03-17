@@ -9,6 +9,7 @@ import java.util.Date;
 @Entity
 public class Noticia extends BaseEntity {
     private String titulo;
+    @Column(columnDefinition = "TEXT")
     private String resumen;
     private String fuente;
     private Date fecha;
