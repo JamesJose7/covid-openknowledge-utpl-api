@@ -9,6 +9,7 @@ public class ManeraPrevencion extends BaseEntity {
     private String fuente;
     private String manera;
     private String lugar;
+    private String tipo;
 
     public String getFuente() {
         return fuente;
@@ -32,5 +33,13 @@ public class ManeraPrevencion extends BaseEntity {
 
     public void setLugar(String lugar) {
         this.lugar = lugar;
+    }
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
     }
 }
