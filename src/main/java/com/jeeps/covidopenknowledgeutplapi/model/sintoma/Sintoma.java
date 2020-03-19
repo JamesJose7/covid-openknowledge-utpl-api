@@ -7,6 +7,7 @@ import javax.persistence.Entity;
 @Entity
 public class Sintoma extends BaseEntity {
     private String nombre;
+    private String imagenUrl;
     private String tipo;
     private String fuente;
 
@@ -16,6 +17,14 @@ public class Sintoma extends BaseEntity {
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
+    }
+
+    public String getImagenUrl() {
+        return imagenUrl;
+    }
+
+    public void setImagenUrl(String imagenUrl) {
+        this.imagenUrl = imagenUrl;
     }
 
     public String getTipo() {

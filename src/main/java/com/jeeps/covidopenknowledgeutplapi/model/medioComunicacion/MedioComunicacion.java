@@ -1,16 +1,19 @@
 package com.jeeps.covidopenknowledgeutplapi.model.medioComunicacion;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.jeeps.covidopenknowledgeutplapi.core.BaseEntity;
+import com.jeeps.covidopenknowledgeutplapi.model.redes.Redes;
 
-import javax.persistence.ElementCollection;
-import javax.persistence.Entity;
+import javax.persistence.*;
 import java.util.List;
 
 @Entity
 public class MedioComunicacion extends BaseEntity {
     private String Nombre;
-    @ElementCollection
-    private List<String> redes;
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "redes_id", referencedColumnName = "id")
+    @JsonManagedReference
+    private Redes redes;
     private String fuente;
 
     public String getNombre() {
@@ -21,11 +24,11 @@ public class MedioComunicacion extends BaseEntity {
         Nombre = nombre;
     }
 
-    public List<String> getRedes() {
+    public Redes getRedes() {
         return redes;
     }
 
-    public void setRedes(List<String> redes) {
+    public void setRedes(Redes redes) {
         this.redes = redes;
     }
 
