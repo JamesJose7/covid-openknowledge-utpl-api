@@ -5,11 +5,10 @@ import com.jeeps.covidopenknowledgeutplapi.core.BaseEntity;
 import com.jeeps.covidopenknowledgeutplapi.model.redes.Redes;
 
 import javax.persistence.*;
-import java.util.List;
 
 @Entity
 public class MedioComunicacion extends BaseEntity {
-    private String Nombre;
+    private String nombre;
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "redes_id", referencedColumnName = "id")
     @JsonManagedReference
@@ -17,11 +16,11 @@ public class MedioComunicacion extends BaseEntity {
     private String fuente;
 
     public String getNombre() {
-        return Nombre;
+        return nombre;
     }
 
     public void setNombre(String nombre) {
-        Nombre = nombre;
+        this.nombre = nombre;
     }
 
     public Redes getRedes() {
