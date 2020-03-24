@@ -6,7 +6,7 @@ import org.springframework.stereotype.Repository;
 import org.springframework.web.bind.annotation.CrossOrigin;
 
 @Repository
-@RepositoryRestResource(exported = false)
+@RepositoryRestResource(collectionResourceRel = "redes", path = "redes", exported = false)
 @CrossOrigin(origins = "*")
 public interface RedesRepository extends CrudRepository<Redes, Long> {
 }

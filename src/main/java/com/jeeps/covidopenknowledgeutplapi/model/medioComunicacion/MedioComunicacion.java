@@ -9,7 +9,7 @@ import javax.persistence.*;
 @Entity
 public class MedioComunicacion extends BaseEntity {
     private String nombre;
-    @OneToOne(cascade = CascadeType.ALL)
+    @OneToOne(cascade = CascadeType.ALL, orphanRemoval = true)
     @JoinColumn(name = "redes_id", referencedColumnName = "id")
     @JsonManagedReference
     private Redes redes;

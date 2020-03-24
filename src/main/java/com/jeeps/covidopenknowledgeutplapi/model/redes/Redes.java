@@ -4,11 +4,11 @@ import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.jeeps.covidopenknowledgeutplapi.core.BaseEntity;
 import com.jeeps.covidopenknowledgeutplapi.model.medioComunicacion.MedioComunicacion;
 
-import javax.persistence.Entity;
-import javax.persistence.OneToOne;
+import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
-public class Redes extends BaseEntity {
+public class Redes extends BaseEntity implements Serializable {
     @OneToOne(mappedBy = "redes")
     @JsonBackReference
     private MedioComunicacion medioComunicacion;
